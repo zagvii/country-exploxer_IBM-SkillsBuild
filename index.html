@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clarity+City:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="./data.js" defer></script>
+    <script src="./script.js" defer></script>
+
+    <title>Country Explorer</title>
+</head>
+<body>
+    <header>
+        <img src="assets/world.png" alt="Country Explorer Logo" class="logo">
+        <h1>Country Explorer</h1>
+    </header>
+    <main>
+        <section class="search-section">
+            <span>
+                <label for="searchInputName">Search by country name:</label>
+                <input type="text" id="searchInputName" placeholder="Enter Country Name">
+                <p id="searchInputNameMessage" class="message"></p>
+            </span>
+            <span>
+                <label for="searchSelectRegion">Select a Region:</label>
+                <select id="searchSelectRegion">
+                    <option value="All" selected>All Regions</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </span>
+            <span>
+                <label for="searchInputPopulation">Search by Population:</label>
+                <input type="number" id="searchInputPopulation" placeholder="0">
+                <p id="searchInputPopulationMessage" class="message">Max: 1.5 Billion (1500000000)</p>
+            </span>
+        </section>
+        <section class="results-section">
+            <div id="country-cards-container"></div>
+            <button id="load-more-button">Show More</button>
+        </section>
+</body>
+</html>
